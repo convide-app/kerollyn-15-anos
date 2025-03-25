@@ -1,167 +1,268 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Convite 15 Anos - Kerollyn</title>
-  <!-- Importando fontes do Google -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-  <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Convite 15 Anos - Kerollyn</title>
+      <!-- Importando fontes do Google -->
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+          /* Reset básico */
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+        
+          /* Corpo do site */
+          body {
+            font-family: 'Montserrat', sans-serif;
+            background: #F8F2FF;
+            background-image: url("./assets/golden-bg.jpeg");
+            background-position: center;
+            background-size: cover;
+            color: #333;
+            line-height: 1.6;
+          }
 
-    /* Corpo do site */
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #F8F2FF;
-      color: #333;
-      line-height: 1.6;
-    }
+          /* Container centralizado */
+          .container {
+            width: 90%;
+            max-width: 90vw;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+          }   
+          .hero {
+            background: #111111; /* Cor de destaque conforme o layout */
+            color: #fff;
+            padding: 40px 20px;
+            margin: 5vh;
+            min-height: 90vh;
+            box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.637); /* Sombra abaixo e ao lado direito */;
+          }
+          .invitation {
+            font-family: serif;
+            font-style: italic;
+            font-weight: bold;
+            color: #BF932E;
+          }
+          .location {
+            margin-top: 10%;
+            font-family: serif;
+            color: #BF932E;
+          }
+          
+          .details {
+            margin-top: 10%;
+            font-family: serif;
+            font-weight: bold;
+            color: #BF932E;
+          }
+          .icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10%;
+          }
+          .icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5%;
+            
+          }
+          .icons .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 15vw;
+            height: 15vw;
+            border-radius: 50%;
+            background-color: #BF932E; /* Cor de fundo */
+            color: #fff; /* Cor do texto */
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+            transition: transform 0.3s;
+            overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites da div */
+        }
 
-    /* Container centralizado */
-    .container {
-      width: 90%;
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
+        .icons .icon .material-icons {
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px; /* Garante que o ícone ocupe toda a altura da div */
+            width: 40px; /* Garante que o ícone ocupe toda a largura da div */
+        }
 
-    /* Seção principal com cores de destaque */
-    .hero {
-      background: #C94CFF; /* Cor de destaque conforme o layout */
-      color: #fff;
-      padding: 40px 20px;
-    }
+        .icon-container span {
+            font-size: 12px;
+            margin-top: 5px; /* Ajusta a posição do texto para não sobrepor a div redonda */
+            ; /* Cor do texto */
+            font-weight: lighter;
+        }
 
-    /* Título com fonte diferenciada */
-    .title {
-      font-family: 'Dancing Script', cursive;
-      font-size: 4rem;
-      margin-bottom: 20px;
-    }
+        .icon-label {
+            font-size: 12px;
+            margin-top: 5px; /* Ajusta a posição do texto para não sobrepor a div redonda */
+            color:#BF932E; /* Cor do texto */
+            font-weight: lighter;
+        }
 
-    /* Detalhes do evento */
-    .event-details p {
-      font-size: 1.2rem;
-      margin: 5px 0;
-    }
+        .icons .icon:hover {
+            transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+        }
+        
+        .main-logo {
+            background-image: url("./assets/main-logo.png");
+            background-size: cover;
+            background-position: top;
+            width: 75vw;
+            height: 40vh;
+            margin-left: -5vh;
+            
+        }
 
-    .location, .invitation {
-      margin: 15px 0;
-      font-size: 1.1rem;
-    }
+        .header-logo {
+            background-image: url("./assets/main-logo.png");
+        background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+        background-position: top center; /* Ajusta a posição da imagem para recortar a parte superior central */
+        width: 45vw;
+        height: 15vh;
+        margin-left: 1vh;
+        overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites da div */
+        margin-top: -7vh; /* Remove o padding superior */
+            
+        }
 
-    /* Ícones interativos */
-    .icons {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-    }
+        .footer-logo {
+            position: absolute;
+            bottom: -11vh;
+            left: 50%;
+            transform: translateX(-50%);
+            rotate: 45deg;
+            width: 80px; /* Ajuste o tamanho conforme necessário */
+            height: 80px; /* Ajuste o tamanho conforme necessário */
+            background-image: url("./assets/footer-logo.webp"); /* Certifique-se de que o caminho da imagem esteja correto */
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
 
-    .icon {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #fff;
-      transition: transform 0.3s ease;
-    }
+        .page-title {
+            font-family: serif;
+            font-style: italic;
+            font-weight: bold;
+            color: #BF932E;
+            margin-left: -15vw;
+            margin-right: -15vw;
+          }
 
-    .icon:hover {
-      transform: scale(1.1);
-    }
+        /* Estilo para a lista numerada */
+        ol.custom-list {
+            font-family: serif;
+            list-style: none; /* Remove os estilos de lista padrão */
+            counter-reset: item; /* Reseta o contador de itens */
+            padding-left: 0; /* Remove o padding padrão */
+            text-align: left; /* Alinha o texto à esquerda */
+            font-size: large;
+            padding-top: 10%;
+        }
 
-    .icon img {
-      width: 60px;
-      height: 60px;
-      display: block;
-      margin: 0 auto 10px;
-    }
+        ol.custom-list li {
+            counter-increment: item; /* Incrementa o contador de itens */
+            margin-bottom: 5px; /* Espaçamento entre os itens da lista */
+            color: #BF932E; /* Cor do texto */
+            font-style: italic; /* Deixa o texto em itálico */
+        }
 
-    .icon span {
-      display: block;
-      font-weight: bold;
-    }
+        ol.custom-list li::before {
+            content: counter(item) ". "; /* Adiciona o número antes do item */
+            font-weight: bold; /* Deixa o número em negrito */
+            font-family: serif; /* Define a fonte do número */
+        }
 
-    /* Seção de presentes */
-    .presentes {
-      padding: 40px 20px;
-    }
 
-    .presentes h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #C94CFF;
-    }
+        </style>
+        </head>
+        
+        <body>
+        <audio autoplay loop>
+          <source src="./assets/background-music.mp3" type="audio/mpeg">
+        </audio>
+        <header class="hero">
+            <div class="container" id="convite">
+              <p class="invitation">
+                Você está convidado para esse dia especial!<br>
+                </p>
+<div class="main-logo"></div>
 
-    .presentes-list {
-      list-style: none;
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
+<p class="location">Local: Edícula Fênix</p>
+<p class="details">Sinta-se a vontade para trazer seu cooler!</p>
 
-    .presentes-list li {
-      margin: 10px 0;
-    }
+              <!-- Ícones interativos -->
+              <div class="icons">
+                <div class="icon-container">
+                  <a href="https://maps.app.goo.gl/9cEpWupbfidCy4d57" target="_blank" class="icon">
+                    <span class="material-icons">place</span>
+                    </a>
+                  <span class="icon-label">COMO CHEGAR</span>
+                  </div>
+                  <div class="icon-container">
+                  <a href="https://wa.me/5514996216229?text=Oi!%20Estou%20confirmando%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%2015%20anos%20da%20Kerollyn.%20Vai%20ser%20incr%C3%A9vel!%20%F0%9F%8E%89%E2%9C%A8"
+                    target="_blank" class="icon">
+                    <span class="material-icons">chat</span>
+                    </a>
+                  <span class="icon-label">CONFIRMAR PRESENÇA</span>
+                  </div>
+                  <div class="icon-container">
+                  <a href="#presentes" class="icon">
+                    <span class="material-icons">card_giftcard</span>
+                    </a>
+                  <span class="icon-label">LISTA DE PRESENTES</span>
+                </div>
+              </div>
+              <div class="footer-logo"></div>
+            </div>
+            </header>
 
-    .chave-pix {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-  <!-- Seção de convite principal -->
-  <header class="hero">
-    <div class="container">
-      <h1 class="title">15Kerollyn</h1>
-      <div class="event-details">
-        <p class="day">SÁBADO</p>
-        <p class="time">20 HORAS</p>
-        <p class="date">19 ABRIL</p>
-        <p class="year">2025</p>
-      </div>
-      <p class="location">Local: Edícula Fênix</p>
-      <p class="invitation">
-        Você está convidado para esse dia especial!<br>
-        Sinta-se à vontade para trazer seu cooler!
-      </p>
-      <!-- Ícones interativos -->
-      <div class="icons">
-        <a href="https://maps.app.goo.gl/9cEpWupbfidCy4d57" target="_blank" class="icon">
-          <img src="gps-icon.png" alt="Como Chegar">
-          <span>COMO CHEGAR</span>
-        </a>
-        <a href="https://wa.me/5514996216229?text=Oi!%20Estou%20confirmando%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%2015%20anos%20da%20Kerollyn.%20Vai%20ser%20incr%C3%A9vel!%20%F0%9F%8E%89%E2%9C%A8" target="_blank" class="icon">
-          <img src="whatsapp-icon.png" alt="Confirmar Presença">
-          <span>CONFIRMAR PRESENÇA</span>
-        </a>
-        <a href="#presentes" class="icon">
-          <img src="presentes-icon.png" alt="Lista de Presentes">
-          <span>LISTA DE PRESENTES</span>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Seção de presentes -->
-  <section id="presentes" class="presentes">
-    <div class="container">
-      <h2>Sugestões de presentes</h2>
-      <ul class="presentes-list">
-        <li>Pix</li>
-        <li>Cesta de chocolate</li>
-        <li>Creme</li>
-        <li>Sapato (tamanho 39/40)</li>
-        <li>Shorts (tamanho 38)</li>
-        <li>Blusa (tamanho P)</li>
-        <li>Perfume (doce)</li>
-      </ul>
-      <p class="chave-pix">Chave Pix: (14) 98805-3100</p>
-    </div>
-  </section>
-</body>
+          <header class="hero">
+            <div class="container" id="presentes">
+              <div class="header-logo"></div>
+              <h2 class="page-title">
+                Sugestões de presentes<br>
+              </h2>
+          
+              <!-- Lista de presentes -->
+              <ol class="custom-list">
+                <li>Perfume (doce)</li>
+                <li>Blusa (tamanho P)</li>
+                <li>Shorts (tamanho 38)</li>
+                <li>Sapato (tamanho 39/40)</li>
+                <li>Creme</li>
+                <li>Cesta de chocolate</li>
+                    <li>PIX</li>
+                    </ol>
+                    <br />
+                    <br />
+                    <br />
+                    <h3 class="page-title">Chave PIX: (14) 98805-3100</h3>
+                    <br /><br />
+                    <!-- Ícones interativos -->
+                    <div class="icons">
+                      <div class="icon-container">
+                        <a href="#convite" class="icon">
+                          <span class="material-icons">local_activity</span>
+                        </a>
+                        <span class="icon-label">VOLTAR AO CONVITE</span>
+                      </div>
+                    </div>
+                    <br />
+                    <div class="footer-logo"></div>
+                    </div>
+          </header>
+          </body>
 </html>
